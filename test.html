@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/ionic.bundle.js"></script>
+    <title></title>
+</head>
+<body>
+
+<div ui-view></div>
+
+
+<script>
+    var app=angular.module('myApp',['ionic']);
+    app.config(function($stateProvider,$urlRouterProvider){
+        $stateProvider.state('test1',{
+            templateUrl:'test1.html',
+            url:'/myTest'
+        });
+        $urlRouterProvider.otherwise('/myTest');
+    })
+
+</script>
+</body>
+</html>

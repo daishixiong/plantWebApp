@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/ionic.css"/>
+    <script src="js/ionic.bundle.js"></script>
+    <title>WebApp首页</title>
+    <style>
+        body{
+            background-color:#F3F3F3;
+        }
+    </style>
+</head>
+<body ng-controller="myCtrl">
+
+<ion-header-bar>
+        <button class="button button-clear button-balanced icon ion-navicon"></button>
+        <h1 class="title" style="font-size: 25px;">首页</h1>
+        <button class="button">Edit</button>
+</ion-header-bar>
+<ion-content>
+    <ul class="list list-inset" style="height: 100%;">
+        <li class="item" ng-repeat="temp in  list">
+            <img ng-src="{{temp.pic}}" width="100%" height="100%"/>
+        </li>
+    </ul>   
+</ion-content>
+<!--页尾-->
+<ion-footer-bar>
+    <div class="tabs  tabs-icon-top">
+        <a class="tab-item">
+            <!--//<button class="button-balanced"></button>-->
+            <i class="button button-clear button-balanced icon ion-ios-home-outline "></i>
+            首页
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-compose"></i>
+               日常
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-document-text"></i>
+            讨论
+        </a>
+        <a class="tab-item">
+            <i class="icon ion-person"></i>
+           我的
+        </a>
+    </div>
+</ion-footer-bar>
+<script>
+
+    var app=angular.module('myApp',["ionic"]);
+    app.controller('myCtrl',['$scope','$ionicScrollDelegate',
+        function ($scope,$ionicScrollDelegate) {
+//            $ionicScrollDelegate.scrollTop(true);
+        $scope.list=[
+            {pic:'img/index/02.jpg'},
+            {pic:'img/index/03.jpg'},
+            {pic:'img/index/02.jpg'},
+            {pic:'img/index/03.jpg'},
+            {pic:'img/index/02.jpg'},
+            {pic:'img/index/03.jpg'},
+            {pic:'img/index/02.jpg'},
+            {pic:'img/index/03.jpg'},
+            {pic:'img/index/02.jpg'}
+
+        ];
+
+
+    }])
+
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

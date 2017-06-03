@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/ionic.css"/>
+    <script src="js/ionic.bundle.js"></script>
+    <style>
+        #Text{
+            width: 100%;
+            min-height:500px;
+            border:1px solid transparent;
+
+        }
+    </style>
+</head>
+<body>
+
+    <ion-header-bar>
+        <i class="button button-balanced button-clear">取消</i>
+            <h1 class="title">分享</h1>
+        <i class="button button-clear button-dark">发布</i>
+    </ion-header-bar>
+
+
+    <ion-content class="has-header has-footer">
+        <form action="">
+            <textarea id="Text" >
+                分享你的知识、经验和见解
+            </textarea>
+        </form>
+
+    </ion-content>
+
+
+<script>
+    var app=angular.module('myApp',['ionic']);
+
+</script>
+</body>
+</html>

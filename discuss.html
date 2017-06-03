@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/ionic.css"/>
+    <script src="js/ionic.bundle.js"></script>
+    <title></title>
+    <style>
+       .item-thumbnail-left>img:first-child{
+            border-radius:50%;
+           position:absolute;
+           left:50px;
+           top:50%;
+           transform:translate(-50%,-50%);
+        }
+        .button.button-balanced.button-outline{
+            margin-top:10px;
+            color:#888;
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <ion-header-bar class=" item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="search" placeholder="Search">
+        </label>
+        <button class="button button-clear
+        button-dark
+        ionc
+        ion-android-cloud">
+        </button>
+
+
+    </ion-header-bar>
+
+
+    <ion-content class="has-header has-footer">
+        <div class="list">
+            <a class="item item-thumbnail-left item-text-wrap "  href="#">
+                <img src="img/discuss/circleImages_03.jpg ">
+                <h2>多肉植物种上多久才会重新恢复生长？
+                </h2>
+                <p>2016年10月15日， 如果您是种植多肉职务的新手，建议使用（1）
+                    +粗砂 草碳+珍珠岩+石头...</p>
+                <div style="display: flex ;justify-content: space-between;
+                line-height: 45px;">
+                    <p style="
+                    width:30%;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size:26px;"><i class='icon ion-paintbrush'></i><i class="icon ion-ios-calendar"></i></p>
+                        <button class="
+                        button button-outline
+                        button-balanced
+                        l button-small" style="height:20px;">已解决</button>
+                </div>
+
+            </a>
+
+
+        </div>
+    </ion-content>
+
+
+    <ion-footer-bar ng-include="'footer.html'">
+
+    </ion-footer-bar>
+
+
+
+
+
+
+
+<script>
+
+    var app=angular.module('myApp',['ionic']);
+
+
+</script>
+</body>
+</html>

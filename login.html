@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="myApp"> 
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/ionic.css"/>
+    <script src="js/ionic.bundle.js"></script>
+    <style>
+        body{
+            background:url('img/index/index_bg.jpg') no-repeat;
+            background-size:100%,100%;
+        }
+        .bar-header{
+            background-color:transparent;
+            border-color:transparent;
+        }
+        .bar-footer{
+            border:none;
+        }
+        .row:first-child{
+            padding-top:95px;
+        }
+        .l_txt{
+            font-weight: 400;
+            color:#fff;
+            font-size:100px;
+        }
+        .s_txt{
+            margin-top:50px;
+            color:#fff;
+        }
+        .bar{
+            background-size: 100% 0px;
+        }
+        .input-label{
+            width: 0;
+        }
+        .list-inset .item:first-child{
+            border-radius: 10px;
+            margin-bottom:10px;
+            opacity:0.7;
+        }
+        .list-inset .item:nth-child(2){
+            border-radius:10px;
+            margin-bottom:85px;
+            opacity:0.7;
+        }
+        .bar i{
+            color:#fff;
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+
+
+<ion-header-bar>
+        <i class="
+        icon button  button-clear
+       ion-ios-arrow-back
+        " style="color:#fff;"></i>
+</ion-header-bar>
+
+
+
+<ion-content class="has-header has-footer">
+
+    <div class="row text-center">
+        <div class="col">
+            <p class="l_txt">植记</p>
+            <p class="s_txt">你的职务笔记</p>
+        </div>
+    </div>
+
+    <div class="list list-inset" style="background-color: transparent">
+        <label class="item item-input">
+            <span class="input-label">账号</span>
+            <input type="text">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">密码</span>
+            <input type="password">
+        </label>
+        <button class="
+        button
+        button-balanced
+        button-block
+        "
+                ui-sref="index">登录</button>
+        <span>忘记密码？</span>
+    </div>
+    <div class="row row-center">
+        <div class="col text-center">
+            <button class="button
+            button-balanced
+            button-outline
+            button-stable">注册</button>
+        </div>
+    </div>
+</ion-content>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/ionic.css"/>
+    <script src="js/ionic.bundle.js"></script>
+    <title>WebApp专题详情页</title>
+    <style>
+        body{
+
+        }
+        .item{
+            border:none;
+        }
+
+    </style>
+</head>
+<body ng-controller="myCtrl">
+
+<ion-header-bar>
+        <i class="button ion-chevron-left button-balanced button-large button-clear"></i>
+        <h1 class="title" style="font-size: 25px;">专题详情</h1>
+
+</ion-header-bar>
+<ion-content class="has-header has-footer">
+    <div class="list" ng-repeat="temp in list ">
+        我是主体部分
+        <div class="item ">
+            <h2>{{temp.name}}</h2>
+            <p>{{temp.person}}</p>
+        </div>
+
+        <div class="item item-image">
+            <img ng-src="{{temp.pic}}" style="width: 95%;">
+        </div>
+        <p style="padding:10px 2.5%">爱丽丝的附件三楼拉斯克奖答复拉丝拉萨的咖啡机laasdlkfj
+        阿斯兰的咖啡机山大路口附近阿斯兰的空间法拉盛快递费驾驶空间的f
+        爱死了快点放假拉速度快解放拉速度快解放拉萨看见对方lk
+        拉萨的积分拉数据的分类卡多少了看法就离开就  三大利空j
+        sdfskl就算了开始 是疯了快圣诞节
+        </p>
+    </div>
+</ion-content>
+<!--尾部内容-->
+<div ng-include="'footer.html'">
+</div>
+<script>
+
+    var app=angular.module('myApp',["ionic"]);
+    app.controller('myCtrl',['$scope','$ionicScrollDelegate',
+        function ($scope,$ionicScrollDelegate) {
+//            $ionicScrollDelegate.scrollTop(true);
+        $scope.list=[
+            {   name:'玛丽花和花园用品', person:'Nine Inch Nails', pic:'img/index/02.jpg'},
+            {   name:'玛丽花和花园用品', person:'Nine Inch Nails', pic:'img/index/03.jpg'},
+            {   name:'玛丽花和花园用品', person:'Nine Inch Nails', pic:'img/index/02.jpg'},
+            {   name:'玛丽花和花园用品', person:'Nine Inch Nails', pic:'img/index/03.jpg'},
+            {   name:'玛丽花和花园用品', person:'Nine Inch Nails', pic:'img/index/02.jpg'}
+        ];
+    }])
+
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

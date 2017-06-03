@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/ionic.css"/>
+    <script src="js/ionic.bundle.js"></script>
+    <title>WebApp专题详情页</title>
+    <style>
+        .tabs-icon-top > .tabs .tab-item{
+            font-size:20px;
+            line-height:49px;
+            border-bottom:none;
+            max-width: none;
+        }
+        .tab-item.tab-item-active{
+            background-color: #ddd;
+        }
+
+        .item{
+            border:none;
+        }
+        .hotword>div{
+            text-align:center;
+        }
+        .hotword div:nth-child(2){
+            border-left:1px solid green;
+            border-right:1px solid green;
+        }
+    </style>
+</head>
+<body ng-controller="myCtrl">
+
+<ion-header-bar class="item-input-inset">
+    <label class="item-input-wrapper">
+        <button class="button button-balanced button-clear icon ion-search placeholder-icon"></button>
+        <input type="search" placeholder="搜索">
+    </label>
+    <button class="button button-clear button-balanced">
+        取消
+    </button>
+</ion-header-bar>
+
+<ion-tabs class="tabs-icon-top tabs-top">
+    <ion-tab title="专题" >
+        <ion-view>
+            <ion-content>
+                <h3>搜索历史</h3>
+                <span class="badge badge-royal" style="margin:5px 10px;">花卉植被</span>
+                <span class="badge badge-royal" style="margin:5px 10px;">园艺工具</span>
+                <span class="badge badge-royal" style="margin:5px 10px;">花展</span>
+                <span class="badge badge-royal" style="margin:5px 10px;">摄影</span>
+                <span class="badge badge-royal" style="margin:5px 10px;">花店信息</span>
+                <span class="badge badge-royal" style="margin:5px 10px;">花盆</span>
+
+                <h3>热门搜索</h3>
+           <div class="row hotword">
+               <div class="col col-33">白宇花店</div>
+               <div class="col col-33">白宇花店</div>
+               <div class="col col-33">白宇花店</div>
+           </div>
+
+
+
+            </ion-content>
+        </ion-view>
+    </ion-tab>
+    <ion-tab title="讨论" >
+        <ion-view style="width:100%">
+            <ion-content>
+                <ul class="list list-inset" style="height: 100%;">
+                    <li class="item" ng-repeat="temp in  list">
+                        <img ng-src="{{temp.pic}}" width="100%" height="100%"/>
+                    </li>
+                </ul>
+            </ion-content>
+        </ion-view>
+    </ion-tab>
+
+</ion-tabs>
+
+
+
+<!--尾部内容-->
+<div ng-include="'footer.html'">
+</div>
+<script>
+
+    var app=angular.module('myApp',["ionic"]);
+    app.controller('myCtrl',['$scope','$ionicScrollDelegate',
+        function ($scope,$ionicScrollDelegate) {
+//            $ionicScrollDelegate.scrollTop(true);
+            $scope.list=[
+                {pic:'img/index/02.jpg'},
+                {pic:'img/index/03.jpg'},
+                {pic:'img/index/02.jpg'},
+                {pic:'img/index/03.jpg'},
+                {pic:'img/index/02.jpg'},
+                {pic:'img/index/03.jpg'},
+                {pic:'img/index/02.jpg'},
+                {pic:'img/index/03.jpg'},
+                {pic:'img/index/02.jpg'}
+
+            ];
+
+
+        }])
+
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
